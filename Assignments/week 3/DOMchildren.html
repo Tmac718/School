@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom children</title>
+        <style>
+            .div{
+
+            
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div>Users:</div>
+        <ul>
+            <li>John</li>
+            <li>Pete</li>
+        </ul>
+        
+        <script>
+            //<div> DOM node
+            const div = document.body.childNodes[1]
+
+            //<ul> DOM node
+            const ul = document.body.childNodes[3]
+
+            //<li> pete
+            const pete = document.body.childNodes[3].lastElementChild
+
+
+            div.style.background = "red" ;
+
+            
+            ul.style.background = "green"; 
+            
+            
+            pete.style.background= "white";
+        </script>
+    </body>
+</html>

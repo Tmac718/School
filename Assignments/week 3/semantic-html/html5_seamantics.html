@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>HTML5 Semantics</title>
+
+    <style>
+       
+        header.webpage{
+            height: 200px;
+            width: 100%;
+            text-align: center;
+            color: black;
+            background-color: aqua;
+            margin-top: -2%;
+            margin-left: -.5%;
+            margin-right: -1%;
+        }
+
+        .webpage h1{
+            padding-top: 10px ;
+        }
+        
+
+       
+
+        nav{
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 1;
+            
+        }
+        
+        .container{
+            height: 100%;
+            width: 70%;
+            float: right;
+            display: flex;
+           
+        }
+        
+
+         div.sidebar{
+            
+            
+            display: block;
+            
+            text-align: center;
+            
+            
+           
+        }
+
+
+           
+            
+        
+
+        aside.top{
+            width: 28.5%;
+            height:12%;
+            margin-top: .5%;
+            margin-bottom: .5%;
+            float:left;
+            background-color: aquamarine;
+
+
+
+        }
+        .mid1 , .mid2{
+            width: 28.5%;
+            height: 12%;
+            float: left;
+            margin-top: .5%;
+            margin-bottom: .5%;
+            background-color: aquamarine;
+            
+
+        }
+        aside.bottom{
+           
+            width:28.5%;
+            height: 12%;
+            
+            background-color: aquamarine;
+           
+        }
+        main.content{
+            position: relative;
+            height:100%;
+            width: 70%;
+            display: block;
+            float: right;
+            background-color: white;
+            margin-left: 1%;
+            
+        }
+
+        .content h1{
+            text-align: center;
+        }
+
+        
+
+
+        footer{
+            
+            height: 12%;
+            width: 100%;
+            margin-top: 5px;
+            text-align: center;
+            background-color: aqua;
+            
+            
+        }
+
+        
+
+    </style>
+
+</head>
+
+<body>
+    <header class="webpage">
+        <h1>Semantic HTML</h1>
+        <nav>
+            <h2>Navigate</h2>
+            <ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    
+    <div class="container">
+    <main class="content">
+        <header class="article"><h1>Articles for content</h1></header>
+        <article>
+            <h2>Article Tag</h2>
+            <p>
+            The &lt; article &gt; element represents an independent article in a web page. 
+            It should only wrap content that can be plucked out of your page and distributed 
+            in a completely different context. We can use &lt;article&gt;
+            to mark the main content of the page as a self-contained unit.
+            </p>
+               
+            
+            <h2>Aside Tag</h2>
+            <p>
+                The &lt;aside&gt; tag makes it easy to design the page and it enhances the clarity 
+                of HTML document. It let us easily recognize the main text and subordinate text. 
+                In both the time &lt;div&gt; and &lt;aside&gt; need CSS to specific design. 
+                
+                The &lt;aside&gt; tag supports Global attributes and Event attributes in HTML.
+                This description of aside tags is written entirely in a paragraph tag in the article 
+                section of the websites content.
+               
+                    The &lt;aside&gt; HTML element represents a portion of a document whose content
+                     is only indirectly related to the document's main content. Asides are frequently
+                    presented as sidebars or call-out boxes.
+                    
+            </p>
+        </article>
+
+    </main>
+    </div>
+
+
+
+    
+        <div class="sidebar">
+        
+        
+            <aside class="top">
+                <h3>Nothing Special</h3>
+                <p>
+                The &lt;aside&gt; tag is new in HTML5. 
+                This tag does not render as anything special in 
+                a browser you have to use CSS for that.
+                </p>
+            </aside>
+            
+            <aside class="mid1">
+                <h3>Highlight</h3>
+                <p>
+                    Aside is used to sum up the object of the main 
+                    content. So we briefly describe the content like
+                    a highlighter.
+                </p>
+            </aside>
+
+            
+            <aside class="mid2">
+                <h3>Author Info and Links</h3>
+                <p>The Aside tag is often used to contain Author
+                    information, links and related content.
+                </p>
+            </aside>
+            
+                    
+
+
+            
+            <aside class="bottom">
+                <h3>Helpful</h3>
+                <p> The aside tag is helpful when using advertisements 
+                </p>
+            
+            </aside>
+            
+        
+
+
+        </div>
+    
+    
+        
+
+        
+
+        
+        
+    
+    
+
+    <footer>
+        <h4>Contact Information</h4>
+        <address>
+        written and designed by <a href="mailto:TMcAllister1@egcc.student.edu">
+            Thomas McAllister
+        </a><br>
+        Visit me at: <a href="http://example.com/">Example.com</a>
+
+           
+        </address>
+
+    </footer>
+
+
+
+</body>
+</html>
