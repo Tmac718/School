@@ -12,13 +12,19 @@
             box-sizing: border-box;
 
         }
-        body{
-            height: 100vh;
+        
+        
+        
+
+        header{
+            height: 10vh;
             width: 100vw;
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
+            top: 0;
+            
         }
         .btn{
             outline: none;
@@ -47,6 +53,7 @@
             cursor: pointer;
             transition: 0.3s;
         }
+        
 
 
         #snackbar-container{
@@ -63,16 +70,25 @@
             width: 300px;
             border-radius: 10px;
             box-shadow: 2px 2px 5px rgba(0,0,0, 0.7);
-            color:white;
+            color: white;
             animation: fade-in 3s ease ;
         }
         .snackbar span{
             float: right;
             cursor: pointer;
+            opacity: 0.7;
         }
         .growl{
             background-color: green;
             font-size: 20px;
+           
+        }
+        .popup{
+            
+            background-color: blue;
+            font-size: 20px;
+            
+            
         }
 
         .fade-out{
@@ -109,23 +125,34 @@
 
 
 
-    <main class="container">
+    <header class="container">
         <section class="btn-group">
+            <button class="btn btn-alert" onclick="myFunction()">Alert!</button>
+            <button class="btn btn-popup">Click here for a Popup</button>
             <button class="btn btn-growl">Click here for a flash notice</button>
         </section>
-    </main>
+    </header>
+
+   
+
 
     
     
 
     <script>
         const successBtn = document.querySelector('.btn-growl');
+        const popupBtn = document.querySelector('.btn-popup');
+
 
         const snackbarContainer = document.getElementById('snackbar-container');
 
 
         successBtn.addEventListener('click',()=>{
-        snackbar('growl', 'This is a growl dialog box!',5000)
+        snackbar('growl', 'This is a growl dialog box, but also known as a flash notice! Set with a timeout of 5 seconds but can also be closed by clicking on the x in my bubble.',5000)
+        });
+
+        popupBtn.addEventListener('click',()=>{
+        snackbar('popup', 'This is a popup dialog box! I will not disappear until I am clicked on the x inside my pop-up bubble. I couldnt find anything on this type of dialog box in particular oline, so I used the JavaScript to only have a timeout for a flash notification ',)
         });
         
         function snackbar(type,msg,time){
@@ -135,18 +162,27 @@
 
             if(type === 'growl'){
                 para.classList.add('growl');
+                snackbarContainer.appendChild(para);
+                para.classList.add('fade-out');
+
+                setTimeout(()=>{
+                    snackbarContainer.removeChild(para)
+
+                },time);
+            }
+            
+            else if(type=='popup'){
+                para.classList.add('popup');
+                snackbarContainer.appendChild(para);
             }
 
-            snackbarContainer.appendChild(para);
-            para.classList.add('fade-out');
-
-            setTimeout(()=>{
-                snackbarContainer.removeChild(para)
-
-            },time);
+           
 
         }
-
+        function myFunction() {
+            alert("Hello!  I  am an alert box!  I  am intrusive an unavoidable if you want to continue on a webpage. I  typically need certain criteria met, to inform you or information from you to contiue, among other uses! Please click OK to continue");
+            }
+</script>
 
     </script>
 
