@@ -10,6 +10,8 @@ body {
     justify-content: space-between;
     padding: 20px;
   }
+
+  
   
   header h1 {
     margin: 0;
@@ -28,14 +30,28 @@ body {
     padding: 10px 20px;
     text-decoration: none;
   }
+
   
   section {
     margin: 50px;
   }
 
-  .fit{
-    resize: 20%;
+  aside{
+    position: relative;
+    float: right;
   }
+
+  
+
+  .fit{
+    
+    height: 250px;
+    width: 200px;
+    margin: 1px;
+    
+  }
+  
+  
   
   section h2 {
     text-align: center;
@@ -46,10 +62,23 @@ body {
     padding: 20px;
   }
   
-  aside figure {
-    float: right;
-    margin-left: 20px;
+  figure{   
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    
+    
   }
+  
+  figure figcaption{
+    text-align: center;
+    font-size: 15px;
+}
+  
+  
+
+  
   
   footer {
     background-color: #333;
@@ -58,3 +87,11 @@ body {
     text-align: center;
   }
   
+   
+  
+  
+
+
+
+
+

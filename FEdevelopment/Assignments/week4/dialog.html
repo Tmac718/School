@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Styling for Alert dialog */
+    .alert-dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Styling for Popup dialog */
+    .popup-dialog {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Styling for Growl dialog */
+    .growl-dialog {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Alert dialog -->
+  <div class="alert-dialog" style="display: none;">
+    <p>This is an alert dialog</p>
+    <button id="alert-ok-button">OK</button>
+  </div>
+
+  <!-- Popup dialog -->
+  <div class="popup-dialog" style="display: none;">
+    <p>This is a popup dialog</p>
+    <span class="close-popup">&times;</span>
+  </div>
+
+  <!-- Growl dialog -->
+  <div class="growl-dialog" style="display: none;">
+    <p>This is a growl dialog</p>
+  </div>
+
+  <script>
+    // Show Alert dialog
+    function showAlertDialog() {
+      document.querySelector('.alert-dialog').style.display = "block";
+    }
+
+    // Hide Alert dialog
+    document.querySelector('#alert-ok-button').addEventListener('click', function() {
+      document.querySelector('.alert-dialog').style.display = "none";
+    });
+
+    // Show Popup dialog
+    function showPopupDialog() {
+      document.querySelector('.popup-dialog').style.display = "block";
+    }
+
+    // Hide Popup dialog
+    document.querySelector('.close-popup').addEventListener('click', function() {
+      document.querySelector('.popup-dialog').style.display = "none";
+    });
+
+    // Show Growl dialog
+    function showGrowlDialog() {
+      document.querySelector('.growl-dialog').style.display = "block";
+      setTimeout(function() {
+        document.querySelector('.growl-dialog').style.display = "none";
+      }, 5000);
+    }
+
+    // Show all dialogs
+    showAlertDialog();
+    showPopupDialog();
+    showGrowlDialog();
+  </script>
+</body>
+</html>

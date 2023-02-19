@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Dialogbox practice</title>
+
+    <style>
+    
+        
+    </style>
+</head>
+<body>
+    <dialog id="dialog">
+        <form method="dialog">
+          <p>Would you like to continue?</p>
+          <button type="submit" value="no">No</button>
+          <button type="submit" value="yes">Yes</button>
+        </form>
+      </dialog>
+
+    <script>
+   var dialog = document.getElementById('dialog');
+  dialog.showModal();
+  dialog.addEventListener('close', function (event) {
+    if (dialog.returnValue === 'yes') { /* ... */ }
+  });
+
+  
+    </script>
+    
+</body>
+</html>
